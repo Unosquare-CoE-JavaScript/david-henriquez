@@ -1,0 +1,27 @@
+<div class="text-layout">
+    <h1>Pipes Numerucos y Porcentaje</h1>
+    <p>
+        Pipes Incluidos en Angular - Usualmente en el modulo de Common (CmmonModule)
+    </p>
+</div>
+
+<div class="grid">
+    <div class="col-4">
+        <p-card header="Ventas Netas" subheader="del mes">
+            <i class="pi pi-dollar"></i>
+            {{ventasNetas | number:'1.2-2'}}
+        </p-card>
+    </div>
+
+    <div class="col-4">
+        <p-card header="Ventas Brutas Currency" subheader="del mes">
+            {{ventasNetas+3000000 | currency:'COP':'':'1.0-2'}}
+        </p-card>
+    </div>
+
+    <div class="col-4">
+        <p-card header="Porcentaje Ganancias" subheader="del mes">
+            {{porcentaje | percent:'1.2-2'}}
+        </p-card>
+    </div>
+</div>
